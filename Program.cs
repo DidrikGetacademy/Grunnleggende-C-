@@ -1,38 +1,45 @@
-﻿using System;
-using System.ComponentModel.Design;
+﻿
 
-namespace ifelseopg3
+using System.Collections;
+
+namespace ifelse_Intro_i_C_
 {
-    internal class Program
+    public class Program
+
     {
+
+
+
+
         public static void Main(string[] args)
         {
+            bool IsEqual;
             Console.WriteLine("Skriv inn et tall");
-            var firstNum = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Skriv inn siste tallet");
-            var secondNum = Convert.ToInt32(Console.ReadLine());
+            var userInput = Console.ReadLine();
+            int firstnumber = Convert.ToInt32(userInput);
 
 
-            bool isEqual = true;
-            Console.WriteLine(BoolAnswear(firstNum, secondNum, isEqual));
-        }
+            Console.WriteLine("skriv inn det andre tallet ");
+            var secondUserInput = Console.ReadLine();
+            int secondnumber = Convert.ToInt32(secondUserInput);
 
-        public static bool BoolAnswear(int firstNum, int secondNum, bool isEqual)
-        {
-            if (firstNum + secondNum == 30)
+
+            if (firstnumber == secondnumber)
             {
-                return isEqual;
+                IsEqual = true;
+              
             }
-
-            return false;
-
-            ;
+            else
+            {
+                IsEqual = false;
+                
+            }
+            Console.WriteLine($"{IsEqual}");
 
         }
+
     }
+
 }
 
-/* Oppgave 3:
-   Lag en metode som tar inn to int verdier. Dersom en av de, eller summen til int verdiene blir 30,
-   skal metoden returnere true. Ellers returnerer metoden false*/
+//Oppgave 1: Lag en metode som tar imot to tall og returnerer true dersom tallene er like. 
